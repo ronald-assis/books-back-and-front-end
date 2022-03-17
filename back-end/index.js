@@ -35,7 +35,7 @@ const MESSAGE_ERROR = {
 }
 
 app.get('/', (req, res) => {
-  return res.status(200).send('Olá mundo da APIs https v2');
+  return res.status(200).send({message:'Olá mundo da APIs https v2'});
 })
 
 app.get('/books', (req, res) => {
