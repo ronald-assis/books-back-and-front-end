@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
   return res.status(200).send({message:'Olá mundo da APIs https v2'});
 })
 
-app.get('/books', (req, res) => {
+app.get('/:id', (req, res) => {
   const path = req.path;
   if (path !== '/books') return res.status(404).json(MESSAGE_ERROR);
   return res.status(200).json(books);
